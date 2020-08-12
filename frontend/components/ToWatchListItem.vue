@@ -22,21 +22,27 @@ export default {
   },
   methods: {
     watchItem () {
-      if (this.towatch.watched) {
-        this.towatch.watched = false
-      } else {
-        this.towatch.watched = true
-      }
+      this.$services.towatch.watch(this.towatch).then((data) => {
+        if (this.towatch.watched) {
+          this.towatch.watched = false
+        } else {
+          this.towatch.watched = true
+        }
+      })
     },
     likeItem () {
-      if (this.towatch.liked) {
-        this.towatch.liked = false
-      } else {
-        this.towatch.liked = true
-      }
+      this.$services.towatch.like(this.towatch).then((data) => {
+        if (this.towatch.liked) {
+          this.towatch.liked = false
+        } else {
+          this.towatch.liked = true
+        }
+      })
     },
     deleteItem () {
-      this.$emit('delete', this.towatch)
+      this.$services.towatch.deleteItem(this.towatch.id).then(() => {
+        this.$emit('delete', this.towatch)
+      })
     }
   }
 }

@@ -13,22 +13,9 @@ export default {
   components: {
     ToWatchList
   },
-  asyncData (ctx) {
+  async asyncData (ctx) {
     return {
-      towatchs: [
-        {
-          id: '1',
-          title: 'A',
-          watched: false,
-          liked: false
-        },
-        {
-          id: '2',
-          title: 'B',
-          watched: true,
-          liked: true
-        }
-      ]
+      towatchs: await ctx.app.$services.towatch.findAll()
     }
   },
   data () {

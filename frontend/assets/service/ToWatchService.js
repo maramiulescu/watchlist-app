@@ -59,4 +59,12 @@ export default class ToWatchApi {
       }
     })
   }
+
+  deleteItem (id) {
+    return this.axios({
+      method: 'delete',
+      url: 'towatch/' + id,
+      withCredentials: true
+    })
+  }
 }

@@ -2,7 +2,7 @@ export default (ctx) => {
   ctx.$axios.onError((error) => {
     const errorMsg = error.response ? error.response.data.message : 'Unknown error'
     const errorCode = error.response ? parseInt(error.response.status) : -1
-    if (errorCode == 401) {
+    if (errorCode === 401) { // eslint-disable-next-line
       console.log(errorCode + '-' + errorMsg)
       ctx.redirect('/')
     } else {

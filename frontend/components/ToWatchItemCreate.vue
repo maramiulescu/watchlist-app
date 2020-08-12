@@ -17,8 +17,10 @@ export default {
   },
   methods: {
     create () {
-      this.$emit('create', { id: this.titleOfNewToWatch, title: this.titleOfNewToWatch, watched: false, liked: false })
-      this.titleOfNewToWatch = ''
+      this.$services.towatch.create(this.titleOfNewToWatch).then((data) => {
+        this.$emit('create', data)
+        this.titleOfNewToWatch = ''
+      })
     }
   }
 }
