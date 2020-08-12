@@ -1,11 +1,6 @@
 <template>
   <div class="to-watch-container">
-    <div class="create-container">
-      <input v-model="titleOfNewToWatch" type="text">
-      <button @click="create">
-        Add
-      </button>
-    </div>
+    <to-watch-item-create @create="createItem" />
     <div class="to-watch-list-container">
       <to-watch-list-item v-for="towatch in towatchs" :key="towatch.id" :towatch="towatch" @delete="deleteItem" />
     </div>
@@ -13,10 +8,12 @@
 </template>
 
 <script>
+import ToWatchItemCreate from '~/components/ToWatchItemCreate.vue'
 import ToWatchListItem from '~/components/ToWatchListItem.vue'
 
 export default {
   components: {
+    ToWatchItemCreate,
     ToWatchListItem
   },
   props: {
@@ -33,9 +30,8 @@ export default {
     }
   },
   methods: {
-    create () {
-      this.towatchs.push({ id: this.titleOfNewToWatch, title: this.titleOfNewToWatch, watched: false, liked: false })
-      this.titleOfNewToWatch = ''
+    createItem (item) {
+      this.towatchs.push(item)
     },
     deleteItem (item) {
       this.towatchs.splice(this.towatchs.indexOf(item), 1)
