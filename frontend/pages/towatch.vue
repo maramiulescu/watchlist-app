@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="title">
-      My Watchlist
+      Watchlist
     </h1>
     <to-watch-list :towatchs="towatchs" />
   </div>

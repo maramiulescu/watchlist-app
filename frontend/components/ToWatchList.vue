@@ -42,21 +42,24 @@ export default {
 
 <style lang="scss">
 .to-watch-container {
-  width: 400px;
+  width: 700px;
+  height: fit-content;
   margin: auto;
   margin-top: 50px;
   display: block;
 
   .create-container {
     width: 100%;
-    height: 50px;
+    height: fit-content;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 
     input {
-      height: 50px;
-      width: 250px;
+      height: 30px;
+      width: 85%;
       border: none;
-      padding-left: 10px;
+      padding-left: 30px;
+      padding-bottom: 20px;
+      padding-top: 20px;
       font-family: "Quicksand", "Source Sans Pro", -apple-system,
       BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
       sans-serif;
@@ -67,23 +70,29 @@ export default {
     }
 
     button {
-      height: 45px;
-      width: 145px;
+      height: 30px;
+      width: 75px;
       border: none;
       cursor: pointer;
-      text-align: right;
-      padding-right: 20px;
+      text-align: center;
       font-size: 18px;
+      background-color: white;
       &:focus {
-        outline: none;
+        outline: #47494e;
       }
+    }
+    button:hover {
+      ;
     }
   }
 }
 .to-watch-list-container {
-  width: 400px;
+  width: 700px;
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   display: block;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }

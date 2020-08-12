@@ -41,7 +41,7 @@ export default class ToWatchApi {
       data: {
         id: towatch.id,
         title: towatch.title,
-        watched: true,
+        watched: (!towatch.watched),
         liked: towatch.liked
       }
     })
@@ -55,7 +55,7 @@ export default class ToWatchApi {
         id: towatch.id,
         title: towatch.title,
         watched: towatch.watched,
-        liked: true
+        liked: (!towatch.liked)
       }
     })
   }

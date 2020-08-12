@@ -2,9 +2,15 @@
   <div class="to-watch-item" :class="{ watched: towatch.watched, liked: towatch.liked }">
     <span>{{ towatch.title }}</span>
     <div class="controls">
-      <span @click="deleteItem">🗑</span>
-      <span @click="watchItem">✓</span>
-      <span @click="likeItem">❤</span>
+      <div class="watch">
+        <span @click="watchItem"><font-awesome-icon icon="check" /></span>
+      </div>
+      <div class="like">
+        <span @click="likeItem"><font-awesome-icon icon="heart" /></span>
+      </div>
+      <div class="delete">
+        <span @click="deleteItem"><font-awesome-icon icon="trash" /></span>
+      </div>
     </div>
   </div>
 </template>
@@ -23,20 +29,12 @@ export default {
   methods: {
     watchItem () {
       this.$services.towatch.watch(this.towatch).then((data) => {
-        if (this.towatch.watched) {
-          this.towatch.watched = false
-        } else {
-          this.towatch.watched = true
-        }
+        this.towatch.watched = !this.towatch.watched
       })
     },
     likeItem () {
       this.$services.towatch.like(this.towatch).then((data) => {
-        if (this.towatch.liked) {
-          this.towatch.liked = false
-        } else {
-          this.towatch.liked = true
-        }
+        this.towatch.liked = !this.towatch.liked
       })
     },
     deleteItem () {
@@ -52,32 +50,36 @@ export default {
 .to-watch-item {
   width: 100%;
   display: block;
-  height: 50px;
-  &.watched {
-    opacity: 0.5;
+  height: fit-content;
+  &.watched .controls .watch {
+    color: cadetblue;
   }
-  &.liked {
-    color: darkred;
+  &.liked .controls .like {
+    color: lightcoral;
   }
   span {
     height: 50px;
-    padding-left: 20px;
+    padding-left: 30px;
     line-height: 50px;
-    width: 300px;
+    width: 75%;
     display: inline-block;
+    overflow-wrap: break-word;
   }
   .controls {
-    display: inline-block;
-    height: 50px;
+    display: inline-flex;
+    height: fit-content;
+    width: fit-content;
+    color: lightgray;
+    cursor: pointer;
     line-height: 50px;
-    span {
-      line-height: 50px;
-      height: 50px;
-      display: inline-block;
-      width: 45px;
-      text-align: center;
-      padding: 0;
-      cursor: pointer;
+    .watch:hover {
+      color: cadetblue;
+    }
+    .like:hover {
+      color: lightcoral;
+    }
+    .delete:hover {
+      color: cornflowerblue;
     }
   }
 }

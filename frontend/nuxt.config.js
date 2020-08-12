@@ -29,6 +29,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -36,7 +37,8 @@ export default {
   */
   plugins: [
     '~/plugins/services.js',
-    '~/plugins/interceptor.js'
+    '~/plugins/interceptor.js',
+    '~/plugins/fontawesome.js'
   ],
   /*
   ** Auto import components
