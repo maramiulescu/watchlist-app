@@ -6,8 +6,7 @@
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-  Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: monospace;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -30,14 +29,13 @@ html {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: monospace;
   display: block;
   font-weight: 300;
   font-size: 64px;
-  color: #35495e;
+  color: black;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
 }
 

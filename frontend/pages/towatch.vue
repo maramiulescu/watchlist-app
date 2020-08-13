@@ -27,3 +27,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.container {
+  .title {
+    font-family: monospace;
+    color: black;
+  }
+}
+</style>

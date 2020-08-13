@@ -45,38 +45,40 @@ export default {
   width: 700px;
   height: fit-content;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 100px;
   display: block;
 
   .create-container {
     width: 100%;
-    height: fit-content;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    height: 70px;
+    border-radius: 20px;
+    text-align: center;
 
     input {
       height: 30px;
-      width: 85%;
+      width: 75%;
       border: none;
+      border-bottom: 1px black solid;
       padding-left: 30px;
       padding-bottom: 20px;
+      padding-right: 20px;
       padding-top: 20px;
-      font-family: "Quicksand", "Source Sans Pro", -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-      sans-serif;
-      font-size: 18px;
+      text-underline: lightgray;
+      font-family: monospace;
+      font-size: 17px;
+      color: #4a4a4a;
       &:focus {
         outline: none;
       }
     }
 
     button {
-      height: 30px;
+      height: 40px;
       width: 75px;
       border: none;
       cursor: pointer;
       text-align: center;
       font-size: 18px;
-      background-color: white;
       &:focus {
         outline: #47494e;
       }
@@ -91,9 +93,9 @@ export default {
   height: fit-content;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin: auto;
-  margin-top: 30px;
+  //margin: auto;
+  margin-top: 20px;
   display: block;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  //box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 </style>

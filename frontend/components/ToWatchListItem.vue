@@ -51,6 +51,12 @@ export default {
   width: 100%;
   display: block;
   height: fit-content;
+  margin-top: 20px;
+  font-size: 17px;
+  font-family: monospace;
+  color: #4a4a4a;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
   &.watched .controls .watch {
     color: cadetblue;
   }
@@ -60,6 +66,8 @@ export default {
   span {
     height: 50px;
     padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     line-height: 50px;
     width: 75%;
     display: inline-block;

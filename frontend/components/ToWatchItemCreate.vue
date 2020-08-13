@@ -2,7 +2,7 @@
   <div class="create-container">
     <input v-model="titleOfNewToWatch" type="text" @keyup.enter="create">
     <button @click="create">
-      <font-awesome-icon icon="plus" />
+      <font-awesome-icon icon="plus" size="xs" />
       <!--      <span class="add-text">add</span>-->
     </button>
   </div>
@@ -30,7 +30,8 @@ export default {
 <style lang="scss">
 .create-container {
   button {
-    color: lightgray;
+    color: black;
+    background-color: rgb(239, 239, 239);
     //.add-text {
     //  visibility: visible;
     //  font-size: smaller;

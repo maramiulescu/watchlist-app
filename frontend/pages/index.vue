@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="title">
-      Login
+      Watchlist
     </h1>
     <form action="post" @submit.prevent="performLogin">
       <p>
@@ -10,7 +10,7 @@
           v-model="username"
           type="text"
           name="username"
-          placeholder="Username"
+          placeholder="user"
           required
           autofocus
         >
@@ -21,12 +21,12 @@
           v-model="password"
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="password"
           required
         >
       </p>
       <button type="submit">
-        Sign in
+        <font-awesome-icon icon="plus" size="xs" />
       </button>
     </form>
   </div>
@@ -53,9 +53,11 @@ export default {
 }
 </script>
 <style>
+
 form {
   width: 200px;
   margin: auto;
+  margin-top: 70px;
   text-align: center;
 }
 
@@ -66,9 +68,8 @@ input {
   background: none;
   height: 50px;
   line-height: 50px;
-  font-size: 24px;
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  font-family: monospace;
   font-weight: 300;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -76,17 +77,19 @@ input {
 }
 
 button {
-  width: 100%;
+  width: 40%;
   height: 50px;
   border: none;
-  background-color: #f0c808;
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-  "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: monospace;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   outline: none;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+  color: cornflowerblue;
 }
 </style>
